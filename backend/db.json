@@ -1,0 +1,169 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "account-number": "123465",
+      "name": "hashim",
+      "password": "1234"
+    },
+    {
+      "accountNumber": "12345678911",
+      "name": "hashim",
+      "password": "12345",
+      "confirmPassword": "12345",
+      "id": 2,
+      "balance": 8100
+    },
+    {
+      "accountNumber": "99610414889",
+      "name": "Hashim001",
+      "password": "54321",
+      "confirmPassword": "54321",
+      "id": 3,
+      "balance": -867249
+    },
+    {
+      "accountNumber": "12345678933",
+      "name": "sougandh001",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 4,
+      "balance": 900
+    },
+    {
+      "accountNumber": "99610414883",
+      "name": "Jack123",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 5
+    }
+  ],
+  "transaction": [
+    {
+      "id": 1,
+      "accountNumber": "12345678911",
+      "amount": 1000,
+      "type": "credit",
+      "date": "10-9-2024"
+    },
+    {
+      "accountNumber": "12345678911",
+      "amount": 10000,
+      "type": "credit",
+      "date": "2024-09-06T18:52:48.634Z",
+      "id": 2
+    },
+    {
+      "accountNumber": "12345678911",
+      "amount": 200,
+      "type": "credit",
+      "date": "2024-09-07T05:52:58.112Z",
+      "id": 3
+    },
+    {
+      "accountNumber": "12345678911",
+      "amount": 100,
+      "type": "debit",
+      "date": "2024-09-07T05:54:57.307Z",
+      "id": 4
+    },
+    {
+      "accountNumber": "12345678911",
+      "amount": 2000,
+      "type": "debit",
+      "date": "2024-09-09T11:10:42.707Z",
+      "id": 5
+    },
+    {
+      "accountNumber": "99610414889",
+      "amount": 10000,
+      "type": "credit",
+      "date": "2024-09-11T06:13:36.473Z",
+      "id": 6
+    },
+    {
+      "accountNumber": "99610414889",
+      "amount": 200,
+      "type": "credit",
+      "date": "2024-09-11T06:39:40.602Z",
+      "id": 7
+    },
+    {
+      "accountNumber": "99610414889",
+      "amount": 100,
+      "type": "debit",
+      "date": "2024-09-11T07:27:24.478Z",
+      "id": 8
+    },
+    {
+      "accountNumber": "99610414889",
+      "amount": 50,
+      "type": "credit",
+      "date": "2024-09-11T07:29:36.008Z",
+      "id": 9
+    },
+    {
+      "accountNumber": "99610414889",
+      "amount": 50,
+      "type": "credit",
+      "date": "2024-09-11T07:32:02.367Z",
+      "id": 10
+    },
+    {
+      "accountNumber": "99610414889",
+      "amount": 50,
+      "type": "debit",
+      "date": "2024-09-11T09:09:35.896Z",
+      "id": 11
+    },
+    {
+      "accountNumber": "99610414889",
+      "amount": 100,
+      "type": "credit",
+      "date": "2024-09-11T09:15:15.227Z",
+      "id": 12
+    },
+    {
+      "accountNumber": "12345678933",
+      "amount": 100,
+      "type": "debit",
+      "date": "2024-09-12T12:50:19.765Z",
+      "id": 13
+    },
+    {
+      "accountNumber": "12345678933",
+      "amount": 1000,
+      "type": "credit",
+      "date": "2024-09-12T12:50:36.514Z",
+      "id": 14
+    },
+    {
+      "accountNumber": "99610414889",
+      "amount": 2000,
+      "type": "credit",
+      "date": "2024-09-12T14:47:04.305Z",
+      "id": 15
+    },
+    {
+      "accountNumber": "99610414889",
+      "amount": 800,
+      "type": "credit",
+      "date": "2024-09-12T14:47:28.659Z",
+      "id": 16
+    },
+    {
+      "accountNumber": "99610414889",
+      "amount": 500,
+      "type": "debit",
+      "date": "2024-09-12T14:47:47.622Z",
+      "id": 17
+    },
+    {
+      "accountNumber": "99610414889",
+      "amount": 879799,
+      "type": "debit",
+      "date": "2024-09-19T04:39:45.205Z",
+      "id": 18
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+
+<div class="dashboard-container">
+
+  <div class="main-content">
+    <div class="debit-container">
+      <h2>Debit Amount</h2>
+      <form [formGroup]="debitForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="accountNumber">Account Number:</label>
+          <input id="accountNumber" formControlName="accountNumber" type="text" class="form-control" />
+          <span *ngIf="debitForm.get('accountNumber')?.invalid && debitForm.get('accountNumber')?.touched" class="error-message">
+            Account Number is required.
+          </span>
+        </div>
+
+        <div class="form-group">
+          <label for="debitAmount">Debit Amount:</label>
+          <input appCurrencyFormat id="debitAmount" formControlName="debitAmount" type="number" class="form-control" />
+          <span *ngIf="debitForm.get('debitAmount')?.invalid && debitForm.get('debitAmount')?.touched" class="error-message">
+            Debit Amount is required and must be greater than zero.
+          </span>
+        </div>
+
+        <button type="submit" class="btn btn-primary" [disabled]="debitForm.invalid">Submit</button>
+      </form>
+    </div>
+
+    <router-outlet></router-outlet>
+
+
+  </div>
+</div>
+
+
+<footer>
+  <p>&copy; 2024 Banking App. All rights reserved.</p>
+</footer>
+
+
+

@@ -1,0 +1,127 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.error-message{
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.required{
+  color: red;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #e0eafc, #cfdef3); /* Subtle gradient background */
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #3d0c4e; /* Dark blue for header */
+  color: white;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  text-align: center;
+}
+
+footer {
+  background-color: #f0f0f0; /* Light gray for footer */
+  color: #333;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+
+.container {
+  padding-top: 60px; /* To avoid overlap with fixed header */
+  padding-bottom: 40px; /* To avoid overlap with fixed footer */
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* .card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+} */
+
+h1, h2, h3, h4 {
+  color: #06436f; /* Dark blue for headings */
+}
+
+a {
+  color: #004080;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+.logout{
+  margin-left: 1100px;
+}
+
+
+/* dashboard.component.css */
+.dashboard-container {
+  display: flex;
+  height: 100vh; /* Full height of the viewport */
+}
+
+.sidebar {
+  width: 250px;
+  padding-top: 70px;
+  background-color: #f8f9fa;
+  transition: all 0.3s ease-in-out;
+  min-height: 100vh; /* Ensures sidebar height touches the footer */
+}
+
+.sidebar.closed {
+  width: 0; /* Sidebar hidden when closed */
+  overflow: hidden;
+}
+
+.sidebar.open {
+
+  width: 250px; /* Sidebar visible when open */
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  overflow: auto; /* Allows scrolling if content exceeds the height */
+  padding-top: 100px;
+
+}
+
+.nav-tabs {
+  margin-bottom: 15px;
+}
+
+/* Optional: Styling for better visualization */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+ul li a:hover {
+  background-color: #ddd;
+}

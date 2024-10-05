@@ -1,0 +1,41 @@
+
+<div class="dashboard-container">
+
+  <div class="main-content">
+    <div class="credit-container">
+      <h2>Credit Amount</h2>
+      <form [formGroup]="creditForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="accountNumber">Account Number:</label>
+          <input id="accountNumber" formControlName="accountNumber" type="text" class="form-control" />
+          <div *ngIf="creditForm.get('accountNumber')?.invalid && creditForm.get('accountNumber')?.touched" class="error-message">
+            Account Number is required.
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="creditAmount">Credit Amount:</label>
+          <input appCurrencyFormat id="creditAmount" formControlName="creditAmount" type="number" class="form-control" />
+          <div  *ngIf="creditForm.get('creditAmount')?.invalid && creditForm.get('creditAmount')?.touched" class="error-message">
+            Credit Amount is required and must be greater than zero.
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" [disabled]="creditForm.invalid">Submit</button>
+      </form>
+    </div>
+
+    <router-outlet></router-outlet>
+
+
+  </div>
+</div>
+
+
+<footer>
+  <p>&copy; 2024 Banking App. All rights reserved.</p>
+</footer>
+
+
+
+

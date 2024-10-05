@@ -1,0 +1,89 @@
+<div class="container">
+  <h2>Register</h2>
+  <form [formGroup]="bankRegisterUserForm" (ngSubmit)="onSubmit()">
+
+
+    <!-- Account Number Field -->
+    <div class="form-group">
+      <label for="accountNumber">Account Number:</label>
+      <input
+        type="text"
+        id="accountNumber"
+        formControlName="accountNumber"
+        class="form-control"
+      />
+      <span class="error-message" *ngIf="form['accountNumber'].invalid && form['accountNumber'].touched">
+        <span *ngIf="form['accountNumber'].errors?.['required']">Account number is required.</span>
+        <span *ngIf="form['accountNumber'].errors?.['pattern']">please type correct account number formate. for instance: 12345678912 (11 digits)</span>
+
+      </span>
+      <div *ngIf="userExists" class="error-message">Account number already exists.</div>
+    </div>
+
+    <!-- Name Field -->
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" formControlName="name" class="form-control" />
+      <span class="error-message" *ngIf="form['name'].invalid && form['name'].touched">
+        <span *ngIf="form['name'].errors?.['required']">Name is required.</span>
+        <span *ngIf="form['name'].errors?.['pattern']">this is not a username formate.</span>
+      </span>
+    </div>
+
+    <!-- Password Field -->
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <div class="password-wrapper">
+        <input
+          [type]="hide ? 'password' : 'text'"
+          id="password"
+          formControlName="password"
+          class="form-control"
+        />
+        <button
+          type="button"
+          mat-icon-button
+          (click)="hide = !hide"
+          class="toggle-password"
+          tabindex="-1"
+        >
+          <mat-icon>{{ hide ? 'visibility' : 'visibility_off' }}</mat-icon>
+        </button>
+      </div>
+      <span class="error-message" *ngIf="form['password'].invalid && form['password'].touched">
+        <span *ngIf="form['password'].errors?.['required']">Password is required.</span>
+      </span>
+    </div>
+
+    <!-- Confirm Password Field -->
+    <div class="form-group">
+      <label for="confirmPassword">Confirm Password:</label>
+      <input
+        type="password"
+        id="confirmPassword"
+        formControlName="confirmPassword"
+        class="form-control"
+      />
+
+      <span class="error-message" *ngIf="form['confirmPassword'].invalid && form['confirmPassword'].touched">
+        <span *ngIf="form['confirmPassword'].errors?.['required']">Confirm Password is required.</span>
+      </span>
+    </div>
+
+    <div *ngIf="bankRegisterUserForm.hasError('passwordMissMatch') && (form['password'].touched || form['confirmPassword'].touched)">
+      <span class="error-message text-danger">Passwords do not match. Please type correctly.</span>
+    </div>
+
+    <div *ngIf="bankRegisterUserForm.hasError('PassWordLengthIssue') && form['password'].touched">
+      <span class="error-message text-danger">Password must be at least 5 characters long.</span>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary" [disabled]="bankRegisterUserForm.invalid">
+      Register
+    </button>
+    <button routerLink="/login" type="submit" class="btn btn-primary" >
+      Back To Login
+    </button>
+  </form>
+</div>
